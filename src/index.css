@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f3f4f6;
+  height: 100%;
+  width: 20%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.sidebar-group {
+  margin-bottom: 12px;
+}
+
+.sidebar-group-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #4a5568;
+}
+
+.sidebar-item {
+  background-color: #edf2f7;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #e2e8f0;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-footer button {
+  padding: 8px 12px;
+  background-color: #38a169;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-footer button:hover {
+  background-color: #2f855a;
+}
+
+/* Hide/Show Sidebar Button */
+.toggle-sidebar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 8px 12px;
+  background-color: #4a5568;
+  color: white;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-sidebar:hover {
+  background-color: #2d3748;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@layer utilities {
+  @layer utilities responsive {
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
+
+
+.whitespace {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: url('https://img.freepik.com/premium-vector/grid-stripe-seamless-pattern_97886-21859.jpg');
+  background-size: 200px;
+  background-repeat: repeat;
+}
+
+.box {
+  color: white;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate(var(--left), var(--top));
+  transform-origin: bottom left;
+}
+
+.resizer {
+  position: absolute;
+  background-color: black;
+}
+
+.resizer-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.resizer-right {
+  width: 1.5px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  cursor: col-resize;
+}
+
+.resizer-top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5px;
+  width: 100%;
+  cursor: row-resize;
+}
+
+.resizer-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5px;
+  width: 100%;
+  cursor: row-resize;
+}
+
+.round-resizer {
+  width: .5rem;
+  /* padding-top: 100%; */
+  height: .5rem;
+  border-radius: 50%;
+}
+
+.resizer-topleft {
+  cursor: nwse-resize;
+  top: -.2rem;
+  left: -.2rem;
+}
+
+.resizer-topright {
+  cursor: nesw-resize;
+  right: -.2rem;
+  top: -.2rem;
+}
+
+.resizer-bottomleft {
+  cursor: nesw-resize;
+  left: -.2rem;
+  bottom: -.2rem;
+}
+
+.resizer-bottomright {
+  cursor: nwse-resize;
+  right: -.2rem;
+  bottom: -.2rem;
+
+}
+
+/* ANIMATION */
+
+@keyframes popup {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes blurShow {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    top: -2rem;
+  }
+
+  100% {
+    top: 2rem;
+  }
+}
+
+/* SCROLLBAR CUSTOMIZE */
+
+.scrollar-cus::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollar-cus::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scrollar-cus::-webkit-scrollbar:horizontal {
+  width: 8px;
+}
+
+.scrollar-cus::-webkit-scrollbar-thumb:horizontal {
+  background: transparent;
+}

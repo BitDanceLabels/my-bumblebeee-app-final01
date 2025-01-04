@@ -1,0 +1,33 @@
+.marker::after {
+    content: "";
+    width: 30%;
+    height: 65%;
+    position: absolute;
+    background: #45aaf2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .4;
+    rotate: -15deg;
+    z-index: -1;
+}
+
+.marker::before {
+    content: "";
+    width: 35%;
+    height: 50%;
+    position: absolute;
+    background: #45aaf2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .6;
+    rotate: -5deg;
+    z-index: -1;
+}
+
+.active {
+    background-color: rgba(75, 123, 236, 0.1);
+    border-right: 4px solid #4b7bec;
+    color: #4b7bec;
+}

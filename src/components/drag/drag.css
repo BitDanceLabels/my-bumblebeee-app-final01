@@ -1,0 +1,34 @@
+.box {
+    position: absolute;
+    cursor: move;
+    max-width: 215px;
+    border-radius: 5px;
+    padding: 1em;
+    margin: auto;
+    user-select: none;
+    color:black;
+}
+
+
+.drag-here {
+    background-color: aqua;
+}
+
+.myInput {
+    margin: 0 auto;
+    width: 21%;
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    border-radius: 5px 0 0 5px;
+    color: black;
+    font-size: 1.3em;
+    background-color: bisque;
+    padding: .5em;
+}

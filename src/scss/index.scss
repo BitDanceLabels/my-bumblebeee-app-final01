@@ -1,0 +1,60 @@
+@import "./_base";
+@import "./_mixin";
+
+
+.btn-shadow-style{
+    box-shadow: 3px 3px 0 black;
+    font-weight: 700;
+    &:hover{
+        transform: translateX(1px);
+        box-shadow: 2px 2px 0 black;
+    }
+}
+.shadow-style{
+    box-shadow: 3px 3px 0 black;
+}
+
+.stutable{
+    thead{
+        margin-bottom: 1rem;
+        td{
+            font-weight: 700;
+        }
+    }
+    tbody{
+        tr:nth-child(odd){
+            background-color: rgba(255, 255, 255, 0.681);
+        }
+        tr:nth-child(even){
+            background-color: transparent;
+        }
+        tr{
+            border-bottom: 1px solid #ececec;
+            &:hover{
+                color: white;
+                background-color: rgba(0, 0, 0, 0.473);
+                > a {
+                    color: white;
+                }
+            }
+        }
+
+        
+
+    }
+}
+
+.Dropdown-root {
+    width: 66% !important;
+}
+
+.Dropdown-control {
+    border-radius: 8px !important;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25) !important;
+}
+
+@media (max-width: 768px) { 
+    body {
+        background-color: #c1c1c1;
+    }
+}
